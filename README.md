@@ -6,7 +6,7 @@ HOW TO INSTALL(linux only):
 
 git clone https://github.com/sediba/SEDnet.git
 
-cd SEDnet && python SEDnet.py
+cd SEDnet && python3 SEDnet.py
 
 type "i"
 
