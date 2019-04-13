@@ -43,7 +43,7 @@ def menu():
 	if menu_answer == "menu":
 		menu()
 
-	if menu_answer == "i":
+	elif menu_answer == "i":
 		up()
 
 	elif menu_answer == "1":
@@ -81,6 +81,51 @@ def menu():
 
 	elif menu_answer == "12":
 		srp()
+		
+	elif menu_answer == "13":
+		pass()
+	
+def pass():
+
+	word = input(
+    	"Enter the word which you think the WiFi password most likely contains. SEDpass will create a wordlist around that word. > ").lower()  #
+
+	lengh = int(input("Enter the minimum number of characters that you think the password contains. Type 8 for WiFi passwords (suggested). > "))
+
+	results = []
+
+	List = open("numbers.txt").readlines()
+
+	list2 = [el.replace('\n', '') for el in List]
+
+
+	def word_numbers():
+    	for item in list2:
+        	results.append(word + str(item))
+
+    	for item in list2:
+        	results.append(str(item) + word)
+
+	def capital():
+    	for item in list2:
+        	results.append(str(item) + word.capitalize())
+
+    	for item in list2:
+        	results.append(word.capitalize() + str(item))
+
+	word_numbers()
+
+	capital()
+
+
+	for i in results:
+		if len(i) >= lengh:
+			with open(results_file, 'a') as f:
+				print(i, file=f)
+		else:
+			pass
+
+	print("Your wordlist was created successfully! > " + word + ".txt")
 
 #using mtr an advanced traceroute tool to trace the path of an Internet connection provided by: hackertarget.com
 def mtr():
