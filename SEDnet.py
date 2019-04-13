@@ -83,9 +83,9 @@ def menu():
 		srp()
 		
 	elif menu_answer == "13":
-		pass()
+		passs()
 	
-def pass():
+def passs():
 
 	word = input(
     	"Enter the word which you think the WiFi password most likely contains. SEDpass will create a wordlist around that word. > ").lower()  #
