@@ -116,14 +116,14 @@ def passs():
 
 	capital()
 
-
-	for i in results:
-		if len(i) >= lengh:
-			with open(results, 'a') as f:
-				print(i, file=f)
-		else:
-			pass
-
+	dok = word + ".txt"
+	
+	with open(dok, "w+") as f:
+		for item in results:
+			if len(item) >= lengh:
+				f.write("%s\n" % item)
+			else:
+				pass
 	print("Your wordlist was created successfully! > " + word + ".txt")
 	
 	cont()
