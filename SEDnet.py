@@ -91,8 +91,6 @@ def passs():
 
 	lengh = int(input("Enter the minimum number of characters that you think the password contains. Type 8 for WiFi passwords (suggested). > "))
 
-	os.system("clear")
-	
 	results = []
 
 	List = open("numbers.txt").readlines()
@@ -130,7 +128,7 @@ def passs():
 	
 	cont()
 
-#using mtr an advanced traceroute tool to trace the path of an Internet connection provided by: hackertarget.com
+#using mtr, an advanced traceroute tool to trace the path of an Internet connection provided by: hackertarget.com
 def mtr():
 	domain = input("Enter domain name or IP address > ")
 	os.system("clear")
