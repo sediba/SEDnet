@@ -84,7 +84,8 @@ def menu():
 		
 	elif menu_answer == "13":
 		passs()
-	
+
+		
 def passs():
 
 	word = input(
