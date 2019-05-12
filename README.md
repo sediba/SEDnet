@@ -6,6 +6,8 @@ HOW TO INSTALL(linux only):
 
 git clone https://github.com/sediba/SEDnet.git
 
+cd SEDnet
+
 sudo bash ./install.sh
 
 
