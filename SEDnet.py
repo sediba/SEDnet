@@ -36,7 +36,8 @@ def menu():
 	print("10 -- Traceroute/tracing the path of an Interenet Connection")
 	print("11 -- Get all page links from a site")
 	print("12 -- Create a new random password")
-	print("i -- Update SEDnet")
+	print("13 -- Create a wordlist for bruteforce attacks")
+	print("i -- Update/Install SEDnet")
 	print("menu -- whenever you want to see this page again")
 	menu_answer = input("SEDnetworking > ")
 	
@@ -101,18 +102,18 @@ def passs():
 
 
 	def word_numbers():
-    	for item in list2:
-        	results.append(word + str(item))
+		for item in list2:
+			results.append(word + str(item))
 
-    	for item in list2:
-        	results.append(str(item) + word)
+		for item in list2:
+			results.append(str(item) + word)
 
 	def capital():
-    	for item in list2:
-        	results.append(str(item) + word.capitalize())
+		for item in list2:
+			results.append(str(item) + word.capitalize())
 
-    	for item in list2:
-        	results.append(word.capitalize() + str(item))
+		for item in list2:
+			results.append(word.capitalize() + str(item))
 
 	word_numbers()
 
@@ -121,7 +122,7 @@ def passs():
 
 	for i in results:
 		if len(i) >= lengh:
-			with open(results_file, 'a') as f:
+			with open(results, 'a') as f:
 				print(i, file=f)
 		else:
 			pass
