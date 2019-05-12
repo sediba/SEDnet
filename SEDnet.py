@@ -19,7 +19,6 @@ def menu():
  ___) | |___| |_| | | | |  __/ |_ \ V  V / (_) | |  |   <| | | | | (_| |
 |____/|_____|____/|_| |_|\___|\__| \_/\_/ \___/|_|  |_|\_\_|_| |_|\__, |
                                                                   |___/ """)
-	print("")
 	print("Access the tools by typing <sednet> on the terminal")
 	print("")
 	print("1 -- Get information about YOUR IP address")	
@@ -88,10 +87,12 @@ def menu():
 def passs():
 
 	word = input(
-    	"Enter the word which you think the WiFi password most likely contains. SEDpass will create a wordlist around that word. > ").lower()  #
+    	"Enter the word which you think the WiFi password most likely contains. It will create a wordlist around that word. > ").lower()  #
 
 	lengh = int(input("Enter the minimum number of characters that you think the password contains. Type 8 for WiFi passwords (suggested). > "))
 
+	os.system("clear")
+	
 	results = []
 
 	List = open("numbers.txt").readlines()
@@ -126,6 +127,8 @@ def passs():
 			pass
 
 	print("Your wordlist was created successfully! > " + word + ".txt")
+	
+	cont()
 
 #using mtr an advanced traceroute tool to trace the path of an Internet connection provided by: hackertarget.com
 def mtr():
